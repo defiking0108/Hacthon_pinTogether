@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_finder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SurfaceView
+                android:id="@+id/surfaceView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <org.topnetwork.pintogether.utils.zxingV2.ViewfinderView
+                android:id="@+id/viewfinderView"
+                app:labelTextSize="@dimen/text_size_16sp"
+                app:labelText=""
+                app:labelTextLocation="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_75dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_44dp"
+            android:layout_gravity="bottom">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/dimen_50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_toolbar_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="扫一扫"
+                android:textColor="@color/color_main_title"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_photo_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:text="相册"
+                android:visibility="gone"
+                android:textColor="@color/color_weakening_information"
+                android:textSize="@dimen/text_size_14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</FrameLayout>
+
+
+

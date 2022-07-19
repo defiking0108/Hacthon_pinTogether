@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <LinearLayout
+        android:paddingStart="@dimen/dimen_16dp"
+        android:paddingEnd="@dimen/dimen_16dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sign_in_item_location"/>
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/dimen_8dp">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:textColor="@color/color_main_title"
+                android:textSize="@dimen/text_size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_name1"
+                android:textSize="@dimen/text_size_12sp"
+                android:textColor="@color/color_999999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_2dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0.5dp"
+        android:background="#e5e5e5"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

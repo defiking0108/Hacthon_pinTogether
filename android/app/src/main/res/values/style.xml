@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="DialogAnimBottomToUp">
+        <item name="android:windowEnterAnimation">@anim/dialog_anim_bottom_up</item>
+        <item name="android:windowExitAnimation">@anim/dialog_anim_bottom_down</item>
+    </style>
+
+    <style name="DialogAnimTopToDown">
+        <item name="android:windowEnterAnimation">@anim/dialog_anim_top_down</item>
+        <item name="android:windowExitAnimation">@anim/dialog_anim_top_up</item>
+    </style>
+
+    <style name="ToastAnim">
+        <item name="android:windowEnterAnimation">@anim/toast_anim_in</item>
+        <item name="android:windowExitAnimation">@anim/toast_anim_out</item>
+    </style>
+
+    <style name="popmenu_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_show_show</item>
+        <item name="android:windowExitAnimation">@anim/pop_show_hide</item>
+    </style>
+
+    <style name="DialogAnimScale">
+        <item name="android:windowEnterAnimation">@anim/dialog_anim_scale_show</item>
+        <item name="android:windowExitAnimation">@anim/dialog_anim_scale_hide</item>
+    </style>
+
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 将splash图片设置在这，这样这张图片取代白屏 -->
+        <item name="android:windowBackground">@drawable/bg_theme_splash</item>
+        <item name="android:windowFullscreen">true</item>
+        <!--        <item name="android:windowNoTitle">true</item>-->
+        <item name="android:windowAnimationStyle">@style/splashAnim</item>
+        <!--        <item name="android:windowBackground">@null</item>-->
+    </style>
+
+    <!-- 使用style方式定义activity切换动画 -->
+    <style name="splashAnim">
+        <item name="android:activityOpenEnterAnimation">@anim/launcher_anim_slide_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/launcher_anim_slide_out</item>
+    </style>
+
+    <!-- TabBarItem -->
+    <declare-styleable name="TabBarItem">
+        <attr name="checked_item" format="boolean"/>
+        <attr name="bubble_num" format="integer"></attr>
+        <attr name="nomal_icon" format="reference"/>
+        <attr name="check_icon" format="reference"/>
+        <attr name="text" format="string"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="nomal_color" format="color"/>
+        <attr name="check_color" format="color"/>
+        <attr name="menu_gap" format="dimension"/>
+    </declare-styleable>
+
+    <style name="AppThemeBase" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary
+        </item>         <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark
+        </item> <!-- colorPrimaryDark is used for the default status bar background -->
+        <item name="colorAccent">@color/colorAccent
+        </item>           <!--colorAccent 对应EditText编辑时、RadioButton选中、CheckBox等选中时的颜色-->
+        <!--<item name="android:windowIsTranslucent">true</item>--> <!-- 会导致Activity默认跳转动画失效 -->
+
+        <!--<item name="android:windowTranslucentStatus">true</item>      &lt;!&ndash; 5.0以上状态栏透明，配合android:fitsSystemWindows="true" &ndash;&gt;-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+    </style>
+
+    <style name="AppTheme" parent="AppThemeBase">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@null</item>
+        <item name="actionBarSize">@dimen/toolbar_height</item>
+        <item name="android:textSize">@dimen/text_size_15sp</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <declare-styleable name="SwitchView">
+        <attr name="switch_bg_color" format="color" />
+        <attr name="switch_ball_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton" tools:ignore="ResourceName">
+        <attr name="kswThumbDrawable" format="reference" />
+        <attr name="kswThumbColor" format="color|reference" />
+        <attr name="kswThumbMargin" format="dimension|reference" />
+        <attr name="kswThumbMarginTop" format="dimension|reference" />
+        <attr name="kswThumbMarginBottom" format="dimension|reference" />
+        <attr name="kswThumbMarginLeft" format="dimension|reference" />
+        <attr name="kswThumbMarginRight" format="dimension|reference" />
+        <attr name="kswThumbWidth" format="dimension|reference" />
+        <attr name="kswThumbHeight" format="dimension|reference" />
+        <attr name="kswThumbRadius" format="dimension|reference" />
+        <attr name="kswBackRadius" format="dimension|reference" />
+        <attr name="kswBackDrawable" format="reference" />
+        <attr name="kswBackColor" format="color|reference" />
+        <attr name="kswFadeBack" format="boolean" />
+        <attr name="kswThumbRangeRatio" format="float" />
+        <attr name="kswAnimationDuration" format="integer" />
+        <attr name="kswTintColor" format="color|reference" />
+        <attr name="kswTextOn" format="string" />
+        <attr name="kswTextOff" format="string" />
+        <attr name="kswTextThumbInset" format="dimension" />
+        <attr name="kswTextExtra" format="dimension" />
+        <attr name="kswTextAdjust" format="dimension" />
+    </declare-styleable>
+
+
+    <style name="def_switch_view">
+        <item name="switch_bg_color">#3E475A</item>
+        <item name="switch_ball_color">#ffffff</item>
+    </style>
+
+    <!--zxing-->
+    <declare-styleable name="ViewfinderView">
+        <attr name="corner_color" format="color" />
+        <attr name="laser_color" format="color" />
+        <attr name="frame_color" format="color" />
+        <attr name="mask_color" format="color" />
+        <attr name="result_point_color" format="color" />
+        <attr name="result_color" format="color" />
+        <attr name="label_text_color" format="color" />
+        <attr name="label_text" format="string" />
+        <attr name="label_text_size" format="float" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ViewfinderViewV2">
+        <attr name="maskColor" format="color" />
+        <attr name="frameColor" format="color" />
+        <attr name="cornerColor" format="color"/>
+        <attr name="laserColor" format="color"/>
+        <attr name="resultPointColor" format="color"/>
+        <attr name="labelText" format="string"/>
+        <attr name="labelTextColor" format="color"/>
+        <attr name="labelTextSize" format="dimension"/>
+        <attr name="labelTextPadding" format="dimension"/>
+        <attr name="labelTextLocation" format="enum">
+            <enum name="top" value="0"/>
+            <enum name="bottom" value="1"/>
+        </attr>
+        <attr name="showResultPoint" format="boolean"/>
+        <attr name="frameWidth" format="dimension"/>
+        <attr name="frameHeight" format="dimension"/>
+        <attr name="gridColumn" format="integer"/>
+        <attr name="gridHeight" format="dimension"/>
+        <attr name="laserStyle" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="line" value="1"/>
+            <enum name="grid" value="2"/>
+        </attr>
+        <attr name="cornerRectWidth" format="dimension"/>
+        <attr name="cornerRectHeight" format="dimension"/>
+        <attr name="scannerLineMoveDistance" format="dimension"/>
+        <attr name="scannerLineHeight" format="dimension"/>
+        <attr name="frameLineWidth" format="dimension"/>
+        <attr name="scannerAnimationDelay" format="integer"/>
+        <attr name="frameRatio" format="float"/>
+    </declare-styleable>
+
+    <style name="custom_dialog2" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否漂现在activity上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 去除黑色边框的关键设置项 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 屏幕背景是否变暗 -->
+        <item name="android:backgroundDimAmount">0.3</item>
+    </style>
+    <style mce_bogus="1" name="picker_view_scale_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pickerview_dialog_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/pickerview_dialog_scale_out</item>
+    </style>
+    <style mce_bogus="1" name="picker_view_slide_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pickerview_slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/pickerview_slide_out_bottom</item>
+    </style>
+
+
+</resources>

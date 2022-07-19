@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="org.topnetwork.pintogether.ui.activity.vm.ToReceiveActivityVm" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ScrollView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dimen_116dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dimen_16dp"
+            android:paddingEnd="@dimen/dimen_16dp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_12dp">
+
+                <ImageView
+                    android:id="@+id/iv_pic"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0dp"
+                    android:src="@drawable/ic_get_nft_holder"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="W,1:1"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_18sp"
+                android:textColor="@color/color_main_title"/>
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_12sp"
+                android:textColor="@color/color_assist_title"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_48dp"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textColor="@color/color_main_title"
+                    android:text="领取条件"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_map"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_48dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textColor="@color/color_main_title"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/iv_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_to_receive_map"
+                    android:layout_marginStart="@dimen/dimen_4dp"/>
+
+                <FrameLayout
+                    android:layout_width="@dimen/dimen_60dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_validation"
+                        android:text="验证"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:textColor="#3665FD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/iv_validation_through"
+                        android:src="@drawable/ic_to_receive_through"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#e5e5e5"/>
+
+            <LinearLayout
+                android:id="@+id/ll_code"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_48dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textColor="@color/color_main_title"
+                    android:text="扫描二维码签到"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <FrameLayout
+                    android:layout_width="@dimen/dimen_60dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_sign_in"
+                        android:text="签到"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:textColor="#3665FD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/iv_sign_in_through"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_to_receive_through"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/line_code"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#e5e5e5"/>
+
+            <TextView
+                android:id="@+id/tv_remaining"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_48dp"
+                android:gravity="center"
+                android:textColor="@color/color_main_title"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#e5e5e5"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_to_receive"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_52dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_58dp"
+            android:background="@drawable/bg_shape_r8_bbbbbb"
+            android:gravity="center"
+            android:text="立即领取"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp" />
+
+    </RelativeLayout>
+
+</layout>

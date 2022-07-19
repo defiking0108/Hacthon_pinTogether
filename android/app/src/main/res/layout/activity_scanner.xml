@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_75dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_44dp"
+            android:layout_gravity="bottom">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/dimen_50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_toolbar_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="扫一扫"
+                android:textColor="@color/color_main_title"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_photo_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:text="相册"
+                android:textColor="@color/color_weakening_information"
+                android:textSize="@dimen/text_size_14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_finder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SurfaceView
+                android:id="@+id/scanner_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <org.topnetwork.pintogether.utils.zxingV2.ViewfinderView
+                android:id="@+id/viewfinder_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:corner_color="@color/color_0376FF"
+                app:frame_color="@color/viewfinder_frame"
+                app:label_text=" "
+                app:label_text_color="@color/white"
+                app:laser_color="@color/color_0376FF"
+                app:mask_color="@color/viewfinder_mask"
+                app:result_color="@color/result_view"
+                app:result_point_color="@color/result_point_color" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            android:text="将二维码放入框内，即可自动扫描"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

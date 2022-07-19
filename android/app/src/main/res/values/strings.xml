@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">PinTogether</string>
+    <string name="pin">Pin</string>
+    <string name="me">我的</string>
+
+    <string name="permission_permanently_denied_setting">可能无法正常工作因为你永久拒绝了%1$s，跳转设置界面去开启权限。</string>
+
+    <string name="permission_location">定位权限</string>
+    <string name="permission_storage">存储权限</string>
+    <string name="permission_read">读取权限</string>
+    <string name="permission_phone_call">电话权限</string>
+    <string name="permission_contact">联系人权限</string>
+    <string name="permission_camera">相机权限</string>
+    <string name="permission_microphone">麦克风权限</string>
+
+    <string name="brvah_load_end"> </string>
+
+    <string name="str_exception_default">网络出走了，请检查网络状态后重试</string>
+    <string name="str_data_empty">data对象为空</string>
+    <string name="str_time_out_exception">服务器响应超时</string>
+    <string name="str_connect_exception">当前网络不稳定，请检查网络</string>
+    <string name="str_unknown_host_exception">无法解析主机，请检查网络连接</string>
+    <string name="str_unknown_service_exception">未知的服务器错误</string>
+    <string name="str_io_exception">没有网络，请检查网络连接</string>
+    <string name="str_network_on_main_thread_exception">主线程不能网络请求</string>
+    <string name="str_runtime_exception">运行时错误</string>
+    <string name="str_http_exception">http异常</string>
+    <string name="str_parse_exception">转换异常</string>
+
+    <string name="pickerview_cancel">Cancel</string>
+    <string name="pickerview_day"> </string>
+    <string name="pickerview_hours"> </string>
+    <string name="pickerview_minutes"> </string>
+    <string name="pickerview_month"> </string>
+    <string name="pickerview_seconds"> </string>
+    <string name="pickerview_submit">OK</string>
+    <string name="pickerview_year"> </string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="id_state_layout" type="id"/>
+    <item name="id_stub_error" type="id"/>
+    <item name="id_stub_no_net" type="id"/>
+    <item name="id_stub_empty" type="id"/>
+    <item name="id_stub_include_empty" type="id"/>
+    <item name="id_stub_include_empty_desc" type="id"/>
+    <item name="id_stub_loading" type="id"/>
+    <item name="id_layout_error" type="id"/>
+    <item name="id_layout_empty" type="id"/>
+    <item name="id_layout_no_net" type="id"/>
+    <item name="id_layout_loading" type="id"/>
+
+    <item type="id" name="scroll_height_by_keyboard"/>
+    <item type="id" name="bind_keyboard_2_editor"/>
+    <item type="id" name="anchor_view" />
+
+    <item name="id_toolbar_iv_back" type="id" />
+    <item name="id_toolbar_iv_close" type="id" />
+    <item name="id_toolbar_tv_title" type="id" />
+    <item name="id_toolbar_iv_title_icon" type="id" />
+    <item name="id_toolbar_tv_right" type="id" />
+    <item name="id_toolbar_iv_more" type="id" />
+
+    <!--zxing-->
+    <item type="id" name="auto_focus"/>
+    <item type="id" name="decode"/>
+    <item type="id" name="decode_failed"/>
+    <item type="id" name="decode_succeeded"/>
+    <item type="id" name="launch_product_query"/>
+    <item type="id" name="quit"/>
+    <item type="id" name="restart_preview"/>
+    <item type="id" name="return_scan_result"/>
+</resources>

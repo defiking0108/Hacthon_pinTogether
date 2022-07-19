@@ -1,0 +1,137 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+
+}
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('D:\\company\\jks\\pintogether.jks')
+            storePassword 'dingtian666'
+            keyAlias 'topnetwork'
+            keyPassword 'dingtian666'
+        }
+    }
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    dataBinding.enabled = true
+
+    defaultConfig {
+        applicationId "org.topnetwork.pintogether"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+    }
+
+    buildTypes {
+        release {
+            //            applicationIdSuffix ".debug"
+            debuggable false
+            zipAlignEnabled true  // 内存对齐
+            //shrinkResources true    // 移除无用的资源文件
+            minifyEnabled true
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'NET_BASE_URL', '"http://161.189.109.178:8080"'
+        }
+
+        debug{
+            minifyEnabled false
+            zipAlignEnabled true  // 内存对齐
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'NET_BASE_URL', '"http://192.168.50.194:8080"'
+        }
+    }
+    compileOptions {
+        // Support for Java 8 features
+        //coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            System.out.println(output)
+            outputFileName = "${variant.productFlavors.name}-${defaultConfig.versionName}-${variant.buildType.name}.apk".toLowerCase()
+        }
+    }
+
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+}
+
+
+dependencies {
+    implementation files('libs/AMap3DMap_9.3.0_AMapSearch_9.2.0_AMapLocation_6.1.0_20220608.jar')
+    implementation fileTree(include: '*.jar', dir: 'libs')
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    api rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["constraint"]
+
+    api rootProject.ext.dependencies["jackson"]
+    api rootProject.ext.dependencies["auto-service"]
+    api rootProject.ext.dependencies["rxjava2"]
+    implementation rootProject.ext.dependencies["rxandroid2"]
+    implementation rootProject.ext.dependencies["toast"]
+    api rootProject.ext.dependencies["eventbus"]
+    api rootProject.ext.dependencies["kotlin-stdlib-jdk7"]
+    api rootProject.ext.dependencies["rxlifecycle-components"]
+
+    api rootProject.ext.dependencies["BRVH"]
+    implementation rootProject.ext.dependencies["matisse"]
+    implementation rootProject.ext.dependencies["glide"]
+    implementation rootProject.ext.dependencies["Luban"]
+    api rootProject.ext.dependencies["web3j"]
+    api rootProject.ext.dependencies["bitcoinj"]
+    //api rootProject.ext.dependencies["wallet-core"]
+    'com.android.support:recyclerview-v7:22.2.1'
+
+    api rootProject.ext.dependencies["retrofit2"]
+    implementation rootProject.ext.dependencies["adapter-rxjava2"]
+    implementation rootProject.ext.dependencies["rxlifecycle-components"]
+
+    implementation rootProject.ext.dependencies["logging-interceptor"]
+    //二维码
+    implementation rootProject.ext.dependencies["zxing"]
+
+    implementation 'com.contrarywind:wheelview:4.1.0'
+
+}
