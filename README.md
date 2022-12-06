@@ -34,5 +34,3 @@ Design AP cycles(produce and comsume) in PinTogether with reasonable numbers/var
 2. ![image](https://user-images.githubusercontent.com/109508514/205934199-216193fe-89b0-4e59-9119-10a68a49c806.png)
 
 
-### reference doc
-1. 
