@@ -15,19 +15,27 @@ A user could pay APs to build Landmark store(smart contract) , the store could o
 ### **techology**
 
 - **IPFS**
+
 We use ipfs infrustructure for storing nft and another data interactive with our platform
 
 - **EVM contract**
+
 We deployed contract on the polygon network
+
+AP token contract: 0x57ce73C2c10536EAf8e5461eb8A443F5B12CAa32
+
+LandMark factory contract : 0x79515211e2A03cd3E5023D25db3A4eFb4ACCaf4B
 
 ### Demo Video
 
 You can have a look about this demo video here.
-[Video]()
+![video](https://user-images.githubusercontent.com/109508514/205936093-da41ad46-6a99-4a76-b38c-dfabdfaacc70.mp4)
+
 
 ### Next Step
 
 Design AP cycles(produce and comsume) in PinTogether with reasonable numbers/variables, so that a basic game flow could be built.
+Some designing details could be found bellow
 
 ### reference doc
 1. ![image](https://user-images.githubusercontent.com/109508514/205934114-e7a16122-5344-41de-9fc1-64da7c66b104.png)
