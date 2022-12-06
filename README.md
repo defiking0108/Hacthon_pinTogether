@@ -29,5 +29,10 @@ You can have a look about thie demo video here.
 
 Design AP cycles(produce and comsume) in PinTogether with reasonable numbers/variables, so that a basic game flow could be built.
 
-### reference design
+### reference doc
+1. ![image](https://user-images.githubusercontent.com/109508514/205934114-e7a16122-5344-41de-9fc1-64da7c66b104.png)
+2. ![image](https://user-images.githubusercontent.com/109508514/205934199-216193fe-89b0-4e59-9119-10a68a49c806.png)
+
+
+### reference doc
 1. 
