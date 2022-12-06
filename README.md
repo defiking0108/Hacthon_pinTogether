@@ -1,6 +1,6 @@
 ## **PinTogether**
 
-Web3 game runnig on polygon and ipfs/filecoin
+Web3 game running on polygon and ipfs/filecoin
 
 We listened to the judges who participated in the Hackathon competition and included a very preliminary economic model in this update.
 
