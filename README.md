@@ -1,47 +1,33 @@
 ## **PinTogether**
 
-基于IPFS的一款web3项目
+Web3 game runnig on polygon and ipfs/filecoin
 
-通过私钥或者助记词的导入进行登录并可以在地图上创建nft(IPFS技术),他人会在地图上进行nft的领取
+We listened to the judges who participated in the Hackathon competition and included a very preliminary economic model in this update.
 
-### **技术**
+We know that economic models represent the flow and distribution of benefits, and people recognize benefits as valuable for two reasons, either because they generate money or because they satisfy psychological needs. The former corresponds to the Defi and the latter to GameFi.
 
-- **IPFS技术**
+StepN has done a good exploration in Defi. After research, we believe that GameFi is actually more suitable for LBS, because there are already successful web2 LBS games (such as Pokemon Go) in the industry, but no on web3.
 
-主要运用此技术进行数据存储（nft图片）
+During the design process, we investigated several classic game economy models, such as EVE, New world and Menghuanxiyou, and set the most basic output for PinTogether, we call it AP(Active point). It is generated when a user punch in at block of the map.
 
-具体代码org.topnetwork.pintogether.ui.activity.vm.CreateNftActivityVm中:
+A user could pay APs to build Landmark store(smart contract) , the store could offer Pieces in the format of NFT. Pieces are minted(and burned) according to bounding-curve model, which is set in the Landmark contract when it is deployed.
 
-```
-fun uploadFile(getPath: String, url: String) {
-        var file = File(getPath);
-        var size: Long = file.length();
-        var httpClient = OkHttpClient()
-        var mediaType: MediaType? = "image/*".toMediaTypeOrNull();
-        var requestBody: RequestBody = RequestBody.create(mediaType, file);
+### **techology**
 
-        var multipartBody: MultipartBody = MultipartBody.Builder()
-            .setType(MultipartBody.FORM)
-            .addFormDataPart("file", file.getName(), requestBody)
-            .build()
+- **IPFS**
+We use ipfs infrustructure for storing nft and another data interactive with our platform
 
-        var request: Request = Request.Builder()
-            .header(
-                "Authorization",
-                ""
-            )
-            .url('https://api.nft.storage/upload')
-            .post(multipartBody)
-            .build()
+- **EVM contract**
+We deployed contract on the polygon network
 
-        var call: Call = httpClient.newCall(request);
-  
-    }
-```
+### Demo Video
 
-### **使用**
+You can have a look about thie demo video here.
+[Video]()
 
-1,项目目录下的v1.0.0-release.apk可以直接在线安装使用
+### Next Step
 
-2,测试私钥:7b5772ef94e26b5b376f5ec2c6b7d60e23bd57cce7e4c8bb6dfe848da7a6c142
+Design AP cycles(produce and comsume) in PinTogether with reasonable numbers/variables, so that a basic game flow could be built.
 
+### reference design
+1. 
