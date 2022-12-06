@@ -22,7 +22,7 @@ We deployed contract on the polygon network
 
 ### Demo Video
 
-You can have a look about thie demo video here.
+You can have a look about this demo video here.
 [Video]()
 
 ### Next Step
